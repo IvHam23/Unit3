@@ -1,6 +1,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 <style>
 .container {
   position: relative;
@@ -32,14 +34,71 @@
 .container .btn:hover {
   background-color: black;
 }
+    .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #002AFF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 </style>
 </head>
-<body>
+<body style="background-color: black">
 
-<div class="container">
-  <img src="nikelogo.jpg" alt="Snow" style="width:100%">
-  <a href="home.html" class="btn">Click to Get Started</a>
-</div>
+<!-- <div class="container">
+<img src="nikelogo.jpg" alt="Snow" style="width:100%">
+    <a href="home.html" class="btn">Click to Get Started</a>
+</div> -->
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><h1 style="color: aqua"><u>Learn About Everything Streetwear!</u></h1></center>
+    <br>
+     <form action="home.html">
+    <center><button class="button" style="vertical-align:middle"><span>Begin!</span></button></center>
+    </form>
+    
 </body>
 </html>
