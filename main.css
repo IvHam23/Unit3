@@ -81,3 +81,12 @@ li.dropdown {
 .active {
   background-color: #00A2FF;
 }
+
+#topiccard {
+  background-color: white;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+ .tab { margin-left: 40px; }
