@@ -13,9 +13,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <style>
+        /* Footer */
+        footer.info {
+          color: #FFFAF0;
+          background: #777;
+          padding: 23px;
+          text-align: center;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+            clear: both;
+            margin-top: 480px;
+          /* position: fixed; */
+        }
+        </style>
         
     </head>
     
@@ -23,47 +41,92 @@
     
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="LearnPage.html">Learn</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Buy/Sell</a>
-                    <div class="dropdown-content">
-                        <a href="TorontoBS.html">Toronto</a>
-                        <a class="active" href="OnlineBS.html">Online</a>
-                    </div>
-            </li>
-                 <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Releases</a>
-                    <div class="dropdown-content">
-                        <a href="Releases.html">Upcoming</a>
-                        <a href="#">Past</a>
-                        <a href="#">Leaks</a>
-                    </div>
-            </li>
-          <li><a href="#trends">Trends</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#questions">Q's</a></li>
-        </ul>
-        
-        
-        <h1><center><u>May Upcoming Releases</u></center></h1>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1><center><u>Summer Releases</u></center></h1>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">The Streetwear Archives</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="home.html">Home</a></li>
+                <li><a href="LearnPage.html">Learn</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy/Sell<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="TorontoBS.html">Toronto</a></li>
+                  <li><a href="OnlineBS.html">Online</a></li>
+                </ul>
+              </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">B/S Toronto<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ODTO.html">ODTO</a></li>
+                    <li><a href="Kenshi.html">Kenshi</a></li>
+                    <li><a href="Essentials.html">Essentials</a></li>
+                    <li><a href="Plus.html">Plus</a></li>
+                </ul>
+              </li>
+                <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Releases<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Upcoming.html">Upcoming</a></li>
+                  <li><a href="#">Past</a></li>
+                  <li><a href="#">Leaks</a></li>
+                </ul>
+              </li>
+              <li><a href="LearnPage.html">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            </ul>
+          </div>
+        </nav>
 
+        <h1><center><u>Releases</u></center></h1>
+        <br>
+        
+        <h2><center>*Click one of the three different tabs from the dropdown*</center></h2>
+        <h3><center>"Upcoming" will show you the new items coming out this current month</center></h3>
+        <h3><center>"Past" will show you the old items that came out last month</center></h3>
+        <h3><center>"Leaks" will show you the unreleased items that potentially will come out but there are only photos and speculations of them</center></h3>
+        
+        
+        <br>
+        <br>
+        <br>
+        
+        <footer class="info" style="background-color: black">
+            <p style="color: white">Ivan Lee Productions</p>
+            <a href="https://github.com/IvanLee23/Unit3" style="color: #00A2FF">Github</a>
+        </footer>
+        
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
         
     </body>
-    
-    <script>
-       
-        $(document).ready(function() {
-            $('card').card();
-        });
-        
-    </script>
     
 </html>
