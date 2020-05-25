@@ -1,0 +1,168 @@
+<html>
+
+    <head>
+    
+        <title>Home Page</title>
+        
+        <link rel="icon" href="homeicon.png" type="image/png" sizes="16x16">
+        
+        <link rel='stylesheet' type='text/css' href='main.css'>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <style>
+          #map {
+            width: 50%;
+            height: 500px;
+            background-color: grey;
+          }
+            
+        /* Footer */
+        footer.info {
+          color: #FFFAF0;
+          background: #777;
+          padding: 23px;
+          text-align: center;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+            clear: both;
+            margin-top: 50px;
+          /* position: fixed; */
+        }
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">The Streetwear Archives</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="home.html">Home</a></li>
+                <li><a href="LearnPage.html">Learn</a></li>
+              <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy/Sell<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="TorontoBS.html">Toronto</a></li>
+                  <li><a href="OnlineBS.html">Online</a></li>
+                </ul>
+              </li>
+                <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">B/S Toronto<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ODTO.html">ODTO</a></li>
+                    <li><a href="Kenshi.html">Kenshi</a></li>
+                    <li class="active"><a href="Essentials.html">Essentials</a></li>
+                    <li><a href="Plus.html">Plus</a></li>
+                </ul>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Releases<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Upcoming.html">Upcoming</a></li>
+                  <li><a href="#">Past</a></li>
+                  <li><a href="#">Leaks</a></li>
+                </ul>
+              </li>
+              <li><a href="LearnPage.html">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            </ul>
+          </div>
+        </nav>
+        
+        
+        <h1><center><u>Buying and Selling in Stores (Toronto Area)</u></center></h1>
+        <br>
+        <br>
+        <div class="container">
+        <h2><center><u>Essentials</u></center></h2>
+        <br>
+        <h4>Essential is a small boutique that sells the main brands of streetwear. Even though it is a small store, it is filled to the brim with streetwear items. They mainly sell the popular streetwear brands. One thing that makes them stand out from other stores is that they have some old "grails" that are hard to get (especially new) that they have on display and for sale. The funny thing is that they are in the same indoor mall as Kenshi</h4>
+        <br>
+        <a href="https://www.instagram.com/essential_canada/?hl=en">Link to their Instagram</a>
+        <br>
+        <a href="https://www.facebook.com/Essentialca/">Link to their Facebook</a>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div id="map" class="container"></div>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Essentials
+                var Essentials = {lat: 43.659271, lng: -79.382914};
+                // Centered at store
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 19, center: Essentials});
+                // The marker, positioned at Essentials
+                var marker = new google.maps.Marker({position: Essentials, map: map});
+            }
+        </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5J6W5i-1NL7dh6JVMgCMJziOXKp4SMfM&callback=initMap">
+            </script>
+
+
+        <br>
+        <br>
+        <br>
+        
+        <footer class="info" style="background-color: black">
+            <p style="color: white">Ivan Lee Productions</p>
+            <a href="https://github.com/IvanLee23/Unit3" style="color: #00A2FF">Github</a>
+        </footer>
+        
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
+        
+    </body>
+    
+</html>
